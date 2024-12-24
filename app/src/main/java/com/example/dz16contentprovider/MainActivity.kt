@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity(),MessengerContact,CallContact {
         title = " Мои контакты"
         toolbarMain.subtitle = "  Версия 1.Главная страница"
         toolbarMain.setLogo(R.drawable.pleer)
-
+        //Менеджер для просмотра всех контактов
         val layoutManager = LinearLayoutManager(this)
         binding.contactsRv.layoutManager = layoutManager
         if (ActivityCompat.checkSelfPermission(
@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity(),MessengerContact,CallContact {
             getContact()
         }
     }
-
+// Метод Гет Сонтакт. Вызов всех контактов
     @SuppressLint("Range")
     private fun getContact() {
         contactModelList = mutableListOf()
@@ -74,7 +74,7 @@ class MainActivity : AppCompatActivity(),MessengerContact,CallContact {
         phones.close()
         binding.contactsRv.adapter = ContactAdapter(contactModelList!!)
     }
-
+//Разрешение на чтение контактов
     private val permissionContacts = registerForActivityResult(
         ActivityResultContracts.RequestPermission()
     )
@@ -92,7 +92,7 @@ class MainActivity : AppCompatActivity(),MessengerContact,CallContact {
                 .show()
         }
     }
-
+//Разрешение на звонки и смс
     private val permissionPhoneCallSMS = registerForActivityResult(
         ActivityResultContracts.RequestPermission()
     )
@@ -107,7 +107,7 @@ class MainActivity : AppCompatActivity(),MessengerContact,CallContact {
         }
     }
 
-
+//Метод звонок сонтакту
     override fun call(phone: String) {
         if (ActivityCompat.checkSelfPermission(
                 this,
@@ -132,7 +132,7 @@ class MainActivity : AppCompatActivity(),MessengerContact,CallContact {
         (binding.contactsRv.layoutManager as LinearLayoutManager).scrollToPosition(scrollPosition)
     }
 
-
+// Метод подготовки смс
     override fun createMessage(phone: String) {
         if (ActivityCompat.checkSelfPermission(
                 this,

@@ -24,7 +24,7 @@ class MessengerActivity : AppCompatActivity() {
         toolbarMain.subtitle = "  Страница отправки сообщения"
         toolbarMain.setLogo(R.drawable.pleer)
 
-
+// ОБработка кнопки отправить
         val phone = intent.extras?.getString("phone")
         binding.addresseeTv.text = "${binding.addresseeTv.text} $phone"
         binding.sendBtn.setOnClickListener {
