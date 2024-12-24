@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">DZ16ContentProvider</string>
+    <string name="infoStr">Информация  о приложении</string>
+    <string name="exit">Выход из приложения</string>
+    <string name="call_fab">Позвонить</string>
+    <string name="sms_fab">СМС</string>
+    <string name="name_mtv">Имя</string>
+    <string name="phone_mtv">Телефон</string>
+    <string name="send_btn">Отправить</string>
+    <string name="addressee_tv">Адрес</string>
+    <string name="text_et">Сообщение</string>
+</resources>
